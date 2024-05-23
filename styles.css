@@ -1,0 +1,587 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+/*Codigo da Navbar*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+height: 100vh;
+padding: 0;
+margin: 0;
+font-family: "Poppins", sans-serif;
+}
+
+.barn {
+padding: 5px 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 1;
+background-color: #212529;
+}
+.barn .logo {
+display: flex;
+align-items: center;
+}
+.barn .logo img {
+height: 50px;
+width: auto;
+margin-right: 10px;
+}
+.barn .logo h1 {
+font-size: 1.1rem;
+background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.barn ul {
+list-style: none;
+display: flex;
+margin-top: 15px;
+}
+.barn ul li {
+margin-left: 1.5rem;
+}
+.barn ul li a {
+text-decoration: none;
+color: #f5f5f5;
+font-size: 95%;
+font-weight: bold;
+padding: 10px 10px;
+border-radius: 15px;
+}
+
+.barn ul li a:hover {
+color: #212529;
+background-color: #ffc21c;
+transition: 0.4s;
+}
+
+.hamburger {
+display: none;
+cursor: pointer;
+}
+
+.hamburger .line {
+width: 25px;
+height: 2px;
+background-color: #ffffff;
+display: block;
+margin: 7px auto;
+transition: all 0.3s ease-in-out;
+}
+.hamburger-active {
+transition: all 0.3s ease-in-out;
+transition-delay: 0.6s;
+transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+transform: translateY(-5px) rotate(90deg);
+}
+
+.menubar {
+position: absolute;
+top: 0;
+left: -60%;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+width: 60%;
+height: 100vh;
+padding: 20% 0;
+background: #212529;
+transition: all 0.5s ease-in;
+z-index: 1000;
+}
+.active {
+left: 0;
+}
+
+.menubar ul {
+padding: 0;
+list-style: none;
+}
+.menubar ul li {
+margin-bottom: 32px;
+}
+
+.menubar ul li a {
+text-decoration: none;
+color: #ffc21c;
+font-size: 95%;
+font-weight: bold;
+padding: 5px 10px;
+border-radius: 5px;
+}
+
+.menubar ul li a:hover {
+background-color: #f5f5f5;
+}
+
+.hrp {
+margin-bottom: 10px;
+}
+
+@media screen and (max-width: 790px) {
+  .barn {
+    background-color: #212529;
+    }
+
+    .hamburger {
+    display: block;
+    }
+
+    .barn ul {
+    display: none;
+    }
+
+    .imgfundo {
+    background-image: none;
+    background-color: #ffffff;
+    }
+}
+
+/* Fim do codigo NavBar */
+
+/* Código da page Index */
+
+.geo-regular {
+    font-family: "Geo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.imgfundo {
+    background-image: url(./img/back.jpg);
+    background-size: cover;
+    background-size: center center;
+    }
+
+.hometitle {
+    color: aliceblue;
+    margin-left: 200px;
+    margin-top: 150px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  
+  .hometext {
+    color: aliceblue;
+    margin-left: 100px;
+    margin-top: 190px;
+    margin-right: 10%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  
+  .hometext p {
+    margin-left: 110px;
+    margin-top: 30px;
+  }
+
+  .carrosel1{
+    text-align: right;
+    margin-bottom: 90px;
+    color: hwb(0 0% 100%);
+  }
+  
+  .carrosel1 h4{
+    margin-bottom: 30%;
+    margin-top: 5%;
+    margin-left: 60%;
+    text-align: left;
+  }
+
+  @media (max-width: 500px) {
+    .hometitle {
+      margin-left: 100px;
+      margin-top: 80px;
+      color: aliceblue;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+    .hometext {
+      color: aliceblue;
+      margin-left: 50px;
+      margin-top: 100px;
+      margin-right: 10%;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: smaller;
+    }    
+  }
+
+  footer {
+    width: 100%;
+    color: #ffffff;
+    background-color: #212529;
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_contacts img{
+    max-width: 60%;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+} 
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;    
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #7f37c9;
+}
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_subscribe p {
+    color: var(--color-neutral-30);
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+}
+
+#input_group input {
+    width: 100%;
+}
+
+#input_group button {
+    background-color: #7f37c9;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input_group button:hover {
+    opacity: 0.8;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
+/* Fim do código da page Index */
+
+/* Código da page Quem Somos */
+
+@font-face {
+    font-family: Tommy;
+    src: url(fonts/MADE\ TOMMY\ Bold_PERSONAL\ USE.otf);
+ }
+
+ .imgfundo-sobre {
+    background-color: white;
+    }
+
+.container-sobre {
+    max-width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+.title-s {
+    width: 110%;
+    padding-top: 15.5%;
+    padding-left: 18.5%;
+    font-size: 47px;
+    color: #212529;
+    font-family: 'Tommy';
+    line-height: 50px;
+}
+
+.text-s {
+    width: 110%;
+    padding-top: 1%;
+    padding-left: 18.5%;
+    font-size: 16px;
+    color: #494b4e;
+    line-height: 25px;
+}
+
+.img-s {
+    width: 85%;
+    padding-top: 12.5%;
+    padding-left: 25%;
+}
+
+#linha {
+    padding-top: 65px;
+    max-width: 85%;
+    border-bottom: 2px solid #494b4e;
+}
+
+.container-historia {
+    max-width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+}
+
+.back-h {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card-t {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem; 
+}
+
+.card-body-t {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem; 
+}
+
+.card-title-t {
+    margin-bottom: 0.75rem; 
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    max-width: 100%;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.5rem; 
+}
+
+.back-h {
+    padding-left: 22px;
+}
+
+
+/*Accordion*/
+
+.title-perg {
+    max-width: 100%;
+    padding-top: 20px;
+    padding-left: 9%;
+    font-size: 35px;
+    color: #212529;
+    font-family: 'Tommy';
+}
+
+.accordion-sobre {
+    padding-left: 8%;
+    width: 80%;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 450px) {
+
+    .item {
+        padding-left: 8%;
+    }
+
+    .title-s {
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 44px;
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .text-s {
+        width: 100%;
+        padding-top: 10px;
+        padding-left: 28px;
+        font-size: 18px;
+    }
+
+    .img-s {
+        width: 90%;
+        padding-top: 0px;
+        padding-left: 15%;
+    }
+
+    #linha {
+        padding-top: 40px;
+    }
+
+    .back-h {
+        padding-left: 27px;
+    }
+
+    .card-his {
+        padding-top: 20px;
+    }
+
+    .accordion-sobre {
+        padding-left: 20px;
+    }
+
+}
+
+/*Fim do código da página sobre*/
+
+/* Inicio do código de juros simples */
+
+.form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 25px;
+}
+
+.form b {
+    color: red;
+}
+
+.form3{
+    margin: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+@media screen and (max-width:380px) {
+    .img-s{
+        display: none;
+    }
+}
+
+/* Fim do código da página de Juros Simples */
+
+/* Início do código da página Contato */
+
+#experiencia {
+    resize: none;
+}
+
+/* Fim do código da página Contato */
